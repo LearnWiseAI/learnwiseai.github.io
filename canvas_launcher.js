@@ -100,6 +100,11 @@ function registerListeners() {
       });
     });
   }
+  // The new code for checking the URL parameter when the page loads:
+  var urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('learnwise') === 'launch') {
+    showChat();
+  }
 }
 
 loadCSS(function() {
